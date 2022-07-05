@@ -1,4 +1,4 @@
-module adamg/web-service-gin
+module github.com/adglad/web-service-gin
 
 go 1.17
 

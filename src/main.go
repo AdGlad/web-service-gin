@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 
-	"adamg/web-service-gin/morestrings"
+	"github.com/adglad/web-service-gin/morestrings"
 	"fmt"
 
 	"github.com/gin-gonic/gin"
