@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: web-service-gin
+  name: web-service-gin
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web-service-gin
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: web-service-gin
+    spec:
+      containers:
+      - image: adamg/web-service-gin:latest
+        imagePullPolicy: Always
+        name: web-service-gin-1
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
