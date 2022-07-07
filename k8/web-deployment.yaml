@@ -4,7 +4,7 @@ metadata:
   labels:
     app: web-service-gin
   name: web-service-gin
-  namespace: default
+  namespace: web-service-gin
 spec:
   replicas: 1
   selector:
