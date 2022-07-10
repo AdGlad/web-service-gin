@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: web-service-gin
-    project: wordle
+    project: wordleproject
   name: web-service-gin
   namespace: web-service-gin
 spec:
