@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: web-service-gin
+  namespace: argocd
+spec:
+  project: web-service-gin
+  source:
+    repoURL: https://github.com/AdGlad/web-service-gin
+    targetRevision: HEAD
+    path: k8
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: web-service-gin

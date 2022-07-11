@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  creationTimestamp: "2022-07-07T03:59:35Z"
+  generation: 1
+  name: web-service-gin
+  namespace: argocd
+  resourceVersion: "1036127"
+  uid: 8550df7e-b06a-4cf6-a74f-4c413be28114
+spec:
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  destinations:
+  - namespace: 'web-service-gin'
+    server: '*'
+  sourceRepos:
+  - '*'
+status: {}
