@@ -10,8 +10,7 @@
 // @license.name  Apache 2.0
 // @license.url   http://www.apache.org/licenses/LICENSE-2.0.html
 
-// @host      localhost:8080
-// @BasePath  /api/v1
+// @host      35.244.74.153
 
 // @securityDefinitions.basic  BasicAuth
 package main
