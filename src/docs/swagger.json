@@ -1,0 +1,80 @@
+{
+    "schemes": [
+        "http"
+    ],
+    "swagger": "2.0",
+    "info": {
+        "description": "This is  a Web Service Gin server.",
+        "title": "Web Service Gin Swagger API",
+        "termsOfService": "http://swagger.io/terms/",
+        "contact": {
+            "name": "Web Service Gin API Support",
+            "url": "http://www.swagger.io/support",
+            "email": "adamcgladstone@gmail.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0"
+    },
+    "host": "localhost:8010",
+    "basePath": "/",
+    "paths": {
+        "/albums": {
+            "get": {
+                "description": "get albums",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "albums"
+                ],
+                "summary": "List albums",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "format": "email",
+                        "description": "name search by q",
+                        "name": "q",
+                        "in": "query"
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/albums/{id}": {
+            "get": {
+                "description": "get string by ID",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "albums"
+                ],
+                "summary": "Show an albums",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "Album ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            }
+        }
+    },
+    "securityDefinitions": {
+        "BasicAuth": {
+            "type": "basic"
+        }
+    }
+}
