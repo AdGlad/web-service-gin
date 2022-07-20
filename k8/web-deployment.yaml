@@ -23,7 +23,7 @@ spec:
         app: web-service-gin
     spec:
       containers:
-      - image: adamg/web-service-gin:latest
+      - image: adamg/web-service-gin:v1.0
         imagePullPolicy: Always
         name: web-service-gin-1
         resources: {}
