@@ -1,0 +1,19 @@
+apiVersion: gateway.solo.io/v1
+kind: VirtualService
+metadata:
+  name: web-service-gin
+  namespace: gloo-system
+spec:
+  virtualHost:
+    domains:
+      - 'wsg'
+    routes:
+    - matchers:
+      - exact: /all-albums
+      options:
+        prefixRewrite: /albums
+      routeAction:
+        single:
+          upstream:
+            name: web-service-gin-web-service-cip-80
+            namespace: gloo-system
